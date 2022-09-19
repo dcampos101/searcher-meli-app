@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba en ProductItem Debe hacer match con el snapshot 1`] = `
+<div>
+  <a
+    class="card "
+    href="/MLA1137723021"
+  >
+    <article>
+      <img
+        alt="Samsung Galaxy A33 5g 128 Gb Awesome White 6 Gb Ram"
+        src="http://http2.mlstatic.com/D_963008-MLA50999956957_082022-I.jpg"
+      />
+      <section>
+        <h3>
+          Samsung Galaxy A33 5g 128 Gb Awesome White 6 Gb Ram
+        </h3>
+        <section
+          class="details_product"
+        >
+          <div>
+            <span
+              class="max_price"
+            >
+              $
+              99.999
+            </span>
+            <div
+              class="price_container"
+            >
+              <p
+                class="text_price"
+              >
+                $
+                84.999
+              </p>
+              <span>
+                15
+                % OFF
+              </span>
+            </div>
+            <div
+              class="div_shipping_container"
+            >
+              <p
+                class="text_envio"
+              >
+                Envio gratis
+              </p>
+              <div>
+                <svg
+                  color="#00a650"
+                  fill="currentColor"
+                  height="15"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="color: rgb(0, 166, 80);"
+                  viewBox="0 0 16 16"
+                  width="15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"
+                  />
+                </svg>
+                <span
+                  class="full"
+                >
+                  FULL
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="reviews_container"
+          />
+        </section>
+      </section>
+    </article>
+  </a>
+  )
+</div>
+`;

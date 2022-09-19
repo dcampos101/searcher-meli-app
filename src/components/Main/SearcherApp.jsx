@@ -1,36 +1,16 @@
-import './Header.css';
+import './SearcherApp.css';
 import { BsBell, BsCart2, BsGeoAlt } from 'react-icons/bs';
 import React, { useEffect, useState } from 'react';
-//import {  useSelector } from 'react-redux';
-import { SearcherApp } from '../SearcherApp';
-import { ProductSearch } from './ProductSearch';
-import Home from './Home';
-import { ProductGrid } from './ProductGrid';
-//import { ProductGrid } from './productGrid';
+import { ProductSearch } from '../Product/ProductSearch';
+import { ProductGrid } from '../Product/ProductGrid';
 
-//import { get_products } from "../../redux/actions/ProductsAction";
-
-function Header() {
+function SearcherApp() {
   const [search, setSearch] = useState("");
-  /*const order_by = useSelector((state) => state.orderBy);
-  const filters = useSelector((state) => state.filters);
-  //const dispatch = useDispatch();
-
-  /*useEffect(() => {
-    dispatch(get_products(search, order_by, filters));
-  }, [dispatch, search, order_by, filters]);
-*/
-const [ categories, setCategories ] = useState([]);
+  const [ categories, setCategories ] = useState([]);
     
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-  console.log('header');
   const onAddCategory = ( newCategory ) => {
     if ( categories.includes(newCategory) ) return;
     setCategories([ newCategory ]);
-    console.log(newCategory);
-    //Home(newCategory);
   }
   return (
     <>
@@ -89,22 +69,41 @@ const [ categories, setCategories ] = useState([]);
       </section>
     </header>
     <main>
- 
-          <section className=" ">
-            <section>
-          { 
+    <section className="first_section_main">
+            <ul className="ul_categories">
+            </ul>
+            <section className="section_order">
+              <span>Ordenar por </span>
+              <select
+                name="select"
+                className="select_order"
+                >
+                <option className="option_order" value="relevance">
+                  Mas relevantes
+                </option>
+                <option className="option_order" value="price_asc">
+                  Menor precio
+                </option>
+                <option className="option_order" value="price_desc">
+                  Mayor precio
+                </option>
+              </select>
+            </section>
+          </section>
+        <section className="first_section_main">
+            <section className="ul_categories">
+              { 
                 categories.map( ( category ) => (
                     <ProductGrid
                         key={ category } 
                         category={ category } />
                 ))
-            }
+              }
             </section>
-          </section>
-     
+        </section>
     </main>
     </>
   );
 }
 
-export default Header;
+export default SearcherApp;

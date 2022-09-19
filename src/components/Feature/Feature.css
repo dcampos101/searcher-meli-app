@@ -1,0 +1,15 @@
+.item-feature-name {
+  font-weight: 400;
+
+}
+.item-feature-name:after {
+    content: ":";
+  }
+
+.item-feature-value {
+  font-weight: 600;
+}
+.item-feature-value:before {
+    content: " ";
+  }
+

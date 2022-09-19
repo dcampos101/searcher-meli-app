@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 
 export const ProductSearch = ({ onNewCategory }) => {
 
@@ -13,13 +14,12 @@ export const ProductSearch = ({ onNewCategory }) => {
         event.preventDefault();
         if( inputValue.trim().length <= 1) return;
 
-        // setCategories( categories => [ inputValue, ...categories ]);
         setInputValue('');
         onNewCategory( inputValue.trim() );
     }
 
     return (
-        <form onSubmit={ onSubmit }>
+        <form onSubmit={ onSubmit } aria-label='form'>
             <input 
                 type="text"
                 placeholder="Buscar productos, marcas y más…"
@@ -30,4 +30,8 @@ export const ProductSearch = ({ onNewCategory }) => {
             <BsSearch className="search_icon" color="#999" size={20} />
         </form>
     )
+}
+
+ProductSearch.propTypes = {
+    onNewCategory: PropTypes.func.isRequired
 }
