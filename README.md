@@ -17,3 +17,6 @@ Ejecuta el modo de prueba
 ### `yarn build`
 
 Construye la aplicación para producción.
+
+### `App desplegada`
+https://searcher-meli-app.netlify.app/
